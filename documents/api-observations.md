@@ -5,6 +5,13 @@
 **Scenario:**  
 Create booking request is sent with `totalprice: -111`.
 
+**Steps to Reproduce:**
+1. Send a `POST` request to `/booking`
+2. Remove `lastname` from the request body
+3. Send the request
+4. Check the response status code
+
+
 **Expected behavior:**  
 The API should reject the request with `400 Bad Request` because booking price should not be negative.
 
